@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 
-import actual from '..';
+import {dialogWithUser} from '..';
+dialogWithUser();

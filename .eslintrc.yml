@@ -1,0 +1,8 @@
+plugins: jest
+env:
+	node: true
+extends:
+	- 'airbnb-base'
+	- 'plugin:jest'
+rules:
+	no-console: 0
