@@ -6,9 +6,10 @@
 ## Setup
 
 ```sh
-$ git clone https://github.com/Vikman88/project-lvl1-s486.git
+$ git clone https://github.com/Vikman88/project-lvl1-s486.git .
 $ make install
 ```
+[![asciicast](https://asciinema.org/a/GTeq1j32McKsQAzcDMgL3IAkN.svg)](https://asciinema.org/a/GTeq1j32McKsQAzcDMgL3IAkN)
 
 ## Run brain-even
 
