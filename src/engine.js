@@ -37,13 +37,13 @@ export const constructor = (game) => () => {
     }
 
     case "progression": {
-      const rndmNum1 = _.random(1, 10);
-      const rndmNum2 = _.random(50);
+      const randomNum1 = _.random(1, 10);
+      const randomNum2 = _.random(50);
       const hideNum = _.random(9);
-      const questionPrgrssn = _.times(10, (v) => v * rndmNum1 + rndmNum2);
-      const answerPrgrssn = questionPrgrssn[hideNum];
-      const resultPrgrssn = [convertToString(hideNum, questionPrgrssn), _.toString(answerPrgrssn)];
-      return resultPrgrssn;
+      const questionProgression = _.times(10, (v) => v * randomNum1 + randomNum2);
+      const answerProgression = questionProgression[hideNum];
+      const resultProgression = [convertToString(hideNum, questionProgression), _.toString(answerProgression)];
+      return resultProgression;
     }
 
     case "prime": {

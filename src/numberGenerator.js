@@ -1,3 +1,6 @@
 import _ from 'lodash';
 
-export const getGeneratedNumber = () => _.random(1, 100);
+const minNum = 1;
+const maxNum = 100;
+
+export const getGeneratedNumber = () => _.random(minNum, maxNum);

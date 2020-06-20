@@ -1,3 +1,6 @@
 import _ from 'lodash';
 
-export const getGeneratedSymbol = () => ['*','-','+'][_.random(2)];
+const symbolsCount = ['*','-','+'];
+const index = 2;
+
+export const getGeneratedSymbol = () => symbolsCount[_.random(index)];
