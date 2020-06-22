@@ -1,6 +1,5 @@
 # project-lvl1-brain-games
 [![Maintainability](https://api.codeclimate.com/v1/badges/24c33b1d010a935763ee/maintainability)](https://codeclimate.com/github/Vikman88/project-lvl1-s486/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/24c33b1d010a935763ee/test_coverage)](https://codeclimate.com/github/Vikman88/project-lvl1-s486/test_coverage)
 [![Build Status](https://travis-ci.org/Vikman88/project-lvl1-s486.svg?branch=master)](https://travis-ci.org/Vikman88/project-lvl1-s486)
 
 ## Setup
