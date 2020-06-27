@@ -6,8 +6,8 @@ import { isPrimeNumber } from '../checkPrimeNumber.js';
 const getArrayDividers = (num) => {
   const iter = (number, array, divider) => {
     if (number < divider) return array;
-    if (!isPrimeNumber(divider)) return iter(number, array, divider + 1);
-    return (number % divider !== 0 ? iter(number, array, divider + 1)
+    return (!isPrimeNumber(divider)
+      || number % divider !== 0 ? iter(number, array, divider + 1)
       : iter(number / divider, [...array, divider], divider));
   };
   return iter(num, [], 2);
