@@ -8,8 +8,7 @@ export const talkWithUser = (description, getQuestionAnswer) => {
 
   const counterQuestion = 3;
 
-  const iter = (i, selectorByAnswer) => {
-    if (!selectorByAnswer) return `Let's try again, ${username}`;
+  const iter = (i) => {
     if (i === counterQuestion) return `Congratulations, ${username}!`;
     const [question, expectedAnswer] = getQuestionAnswer();
     console.log(`Question: ${question}`);
@@ -17,11 +16,11 @@ export const talkWithUser = (description, getQuestionAnswer) => {
 
     if (answer !== expectedAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
-      return iter(i, false);
+      return `Let's try again, ${username}`;
     }
     console.log('Correct!');
-    return iter(i + 1, selectorByAnswer);
+    return iter(i + 1);
   };
 
-  console.log(iter(0, true));
+  console.log(iter(0));
 };
