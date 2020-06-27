@@ -1,8 +1,8 @@
-plugins: jest
 env:
-	node: true
+  node: true
 extends:
-	- 'airbnb-base'
-	- 'plugin:jest'
+  - 'airbnb-base'
 rules:
-	no-console: 0
+  no-console: 0
+  import/extensions: 0
+  import/prefer-default-export: 0
