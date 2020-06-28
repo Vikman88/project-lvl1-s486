@@ -1,13 +1,12 @@
 import _ from 'lodash';
 import { talkWithUser } from '../index.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
-import { getBoolAnswer } from '../boolAnswer.js';
 
 const isEvenNumber = (num) => num % 2 === 0;
 
 const constructor = () => {
   const question = getGeneratedNumber();
-  const answer = getBoolAnswer(isEvenNumber(question));
+  const answer = isEvenNumber(question) ? 'yes' : 'no';
   return [_.toString(question), answer];
 };
 

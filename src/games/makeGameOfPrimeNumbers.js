@@ -2,11 +2,10 @@ import _ from 'lodash';
 import { talkWithUser } from '../index.js';
 import { isPrimeNumber } from '../checkPrimeNumber.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
-import { getBoolAnswer } from '../boolAnswer.js';
 
 const constructor = () => {
   const question = getGeneratedNumber();
-  const answer = getBoolAnswer(isPrimeNumber(question));
+  const answer = isPrimeNumber(question) ? 'yes' : 'no';
   return [_.toString(question), answer];
 };
 
