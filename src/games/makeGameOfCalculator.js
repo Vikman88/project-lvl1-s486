@@ -27,10 +27,9 @@ const getExpression = (num1, num2, symbol) => {
 };
 
 const constructor = () => {
-  const result = (question, answer) => [question, answer];
   const [question, answer] = getExpression(getGeneratedNumber(),
     getGeneratedNumber(), getGeneratedSymbol());
-  return result(question, _.toString(answer));
+  return [question, _.toString(answer)];
 };
 
 export const makeGame = () => {

@@ -14,7 +14,6 @@ const getArrayDividers = (num) => {
 };
 
 const constructor = () => {
-  const result = (question, answer) => [question, answer];
   const num1 = getGeneratedNumber();
   const num2 = getGeneratedNumber();
   const question = `${num1} ${num2}`;
@@ -28,7 +27,7 @@ const constructor = () => {
     }
     return acc;
   }, []).reduce((acc, v) => acc * v, 1);
-  return result(question, _.toString(answer));
+  return [question, _.toString(answer)];
 };
 
 export const makeGame = () => {
