@@ -6,10 +6,9 @@ import { getBoolAnswer } from '../boolAnswer.js';
 const isEvenNumber = (num) => num % 2 === 0;
 
 const constructor = () => {
-  const result = (question, answer) => [question, answer];
   const question = getGeneratedNumber();
   const answer = getBoolAnswer(isEvenNumber(question));
-  return result(_.toString(question), answer);
+  return [_.toString(question), answer];
 };
 
 export const makeGame = () => {
