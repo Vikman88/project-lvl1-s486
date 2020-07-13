@@ -10,7 +10,7 @@ const createQuestionAnswer = () => {
   return [_.toString(question), answer];
 };
 
-export const playGame = () => {
+export default () => {
   const description = 'Answer "yes" if number even otherwise answer "no".';
   return makeGame(description, createQuestionAnswer);
 };

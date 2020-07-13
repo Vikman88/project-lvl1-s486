@@ -4,8 +4,8 @@ import { getGeneratedNumber } from '../numberGenerator.js';
 
 const getGeneratedOperator = () => {
   const operatorsCount = ['*', '-', '+'];
-  const index = operatorsCount.length - 1;
-  return operatorsCount[_.random(index)];
+  const lastIndex = operatorsCount.length - 1;
+  return operatorsCount[_.random(lastIndex)];
 };
 
 const calculate = (num1, num2, operator) => {
@@ -39,7 +39,7 @@ const createQuestionAnswer = () => {
   return [question, _.toString(answer)];
 };
 
-export const playGame = () => {
+export default () => {
   const description = 'What is the result of the expression?';
   return makeGame(description, createQuestionAnswer);
 };

@@ -7,10 +7,12 @@ export const makeGame = (description, getQuestionAnswer) => {
   console.log(`Hello, ${username}!`);
 
   const roundsCount = 3;
+  const fail = `Let's try again, ${username}`;
+  const success = `Congratulations, ${username}!`;
 
   const iter = (i) => {
     if (i === roundsCount) {
-      return console.log(`Congratulations, ${username}!`);
+      return success;
     }
     const [question, expectedAnswer] = getQuestionAnswer();
     console.log(`Question: ${question}`);
@@ -18,11 +20,11 @@ export const makeGame = (description, getQuestionAnswer) => {
 
     if (answer !== expectedAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
-      return console.log(`Let's try again, ${username}`);
+      return fail;
     }
     console.log('Correct!');
     return iter(i + 1);
   };
 
-  iter(0);
+  console.log(iter(0));
 };

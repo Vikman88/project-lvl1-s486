@@ -3,9 +3,9 @@ import { makeGame } from '../index.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
 
 const isPrimeNumber = (num) => {
-  if (num === 1) return false;
+  if (num <= 1) return false;
   const iter = (number, divider) => {
-    if (number === divider) return true;
+    if (number / 2 < divider) return true;
     if (number % divider === 0) return false;
     return iter(number, divider + 1);
   };
@@ -18,7 +18,7 @@ const createQuestionAnswer = () => {
   return [_.toString(question), answer];
 };
 
-export const playGame = () => {
+export default () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   return makeGame(description, createQuestionAnswer);
 };
