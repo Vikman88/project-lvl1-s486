@@ -23,7 +23,7 @@ export const makeGame = (description, getQuestionAnswer) => {
       return;
     }
     console.log('Correct!');
-    return iter(i + 1);
+    iter(i + 1);
   };
 
   return iter(0);
