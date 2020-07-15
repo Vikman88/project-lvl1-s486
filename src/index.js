@@ -26,5 +26,5 @@ export const makeGame = (description, getQuestionAnswer) => {
     iter(i + 1);
   };
 
-  return iter(0);
+  iter(0);
 };
