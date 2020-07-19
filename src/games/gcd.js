@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { makeGame } from '../index.js';
+import { playGame } from '../index.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
 
 const gcd = (n1, n2) => {
@@ -18,5 +18,5 @@ const createQuestionAnswer = () => {
 
 export default () => {
   const description = 'Find the greatest common divisor of given numbers.';
-  return makeGame(description, createQuestionAnswer);
+  return playGame(description, createQuestionAnswer);
 };

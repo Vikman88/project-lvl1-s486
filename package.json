@@ -1,7 +1,8 @@
 {
   "name": "brain-games-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Brain Games - my first project on hexlet.io. There are five console mini games.",
+  "keywords":  "hexlet, brain-games, js",
   "main": "index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",

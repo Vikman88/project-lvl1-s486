@@ -1,11 +1,11 @@
 import _ from 'lodash';
-import { makeGame } from '../index.js';
+import { playGame } from '../index.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
 
 const getGeneratedOperator = () => {
-  const operatorsCount = ['*', '-', '+'];
-  const lastIndex = operatorsCount.length - 1;
-  return operatorsCount[_.random(lastIndex)];
+  const operators = ['*', '-', '+'];
+  const lastIndex = operators.length - 1;
+  return operators[_.random(lastIndex)];
 };
 
 const calculate = (num1, num2, operator) => {
@@ -41,5 +41,5 @@ const createQuestionAnswer = () => {
 
 export default () => {
   const description = 'What is the result of the expression?';
-  return makeGame(description, createQuestionAnswer);
+  return playGame(description, createQuestionAnswer);
 };

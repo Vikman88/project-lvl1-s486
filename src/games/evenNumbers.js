@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { makeGame } from '../index.js';
+import { playGame } from '../index.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
 
 const isEvenNumber = (num) => num % 2 === 0;
@@ -12,5 +12,5 @@ const createQuestionAnswer = () => {
 
 export default () => {
   const description = 'Answer "yes" if number even otherwise answer "no".';
-  return makeGame(description, createQuestionAnswer);
+  return playGame(description, createQuestionAnswer);
 };

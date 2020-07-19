@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { makeGame } from '../index.js';
+import { playGame } from '../index.js';
 import { getGeneratedNumber } from '../numberGenerator.js';
 
 const isPrimeNumber = (num) => {
@@ -20,5 +20,5 @@ const createQuestionAnswer = () => {
 
 export default () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return makeGame(description, createQuestionAnswer);
+  return playGame(description, createQuestionAnswer);
 };
